@@ -1,0 +1,211 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #ff6600;
+    --secondary-color: #ffc600;
+    --font-color: rgba(22, 28, 45, 0.7);
+    --bg-color: #fff;
+    --heading-color: #232121;
+    --border-radius: 6px;
+    --border-radius-full: 35px;
+    --border-color: transparent;
+    --border-color-light: #eee;
+    --nav-color: #232121;
+    --dropdown-color: #fff;
+    --iframe-filter: grayscale(0%);
+    --bg-light: rgba(130, 115, 252, .05);
+    --bg-grey: #f7f7f7;
+    --footer-bg: #000;
+    --card-bg: #fff;
+}
+
+/* h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+} */
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--font-color);
+    font-family: 'Quicksand', sans-serif;
+}
+.banner {
+    background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), url(../img/banner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: initial;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+.banner .header {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 20px;
+    padding: 40px 0 20px 0;
+    align-items: center;
+}
+.header .logo h1 a {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.theme {
+    text-align: center !important;
+}
+
+.header_right .search_bar {
+    display: flex;
+    position: relative;
+}
+
+.header_right .search_bar input {
+    display: flex;
+    flex: 1;
+    padding: 10px 50px 10px 20px;
+    height: 45px;
+    font-size: 16px;
+    color: var(--font-color);
+    border: none;
+    font-weight: 400;
+    border-radius: var(--border-radius);
+    position: relative;
+    right: 0;
+    background: var(--bg-color);
+    outline: 0;
+    border: 1px solid var(--bg-color)
+}
+.search_bar span i {
+    position: absolute;
+    right: 20px;
+    font-size: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.nav_button {
+    text-align: center !important;
+}
+.nav_button button {
+    outline: none;
+    border: none;
+    background: none;
+    text-align: center;
+    color: #fbfdfb;
+    font-size: 1.95em;
+    padding: 0 8px;
+}
+.banner_info {
+    max-width: 600px;
+    text-align: left;
+    margin-top: 100px;
+}
+.banner_info a {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 45px;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+    transition: 0.3s ease-in;
+    border-radius: var(--border-radius);
+}
+.banner_info h3 {
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+.banner_info p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    font-weight: 300;
+}
+.banner_info .btn:hover {
+    color: var(--primary-color);
+    background-color: var(--card-bg);
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* @media (min-width: 1200px) {
+    .container {
+        margin-right: auto;
+        margin-left: auto;
+    }
+} */
+
+/* @media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+} */
+
+
+/* @media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+} */
+
+/* @media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }    
+} */
+
+
+/* About */
+.about {
+    background-color: var(--bg-color);
+}
+.about_content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.about_left h6{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    display: block;
+    font-family: 'Pacifico', cursive;
+}
+.about_left h3 {
+    font-size: 38px;
+    line-height: 48px;
+    font-weight: 600;
+}
+@media (min-width: 992px) {
+    .pl-lg-5, .px-lg-5 {
+        padding-left: 3rem !important;
+    }
+}
