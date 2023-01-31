@@ -37,21 +37,22 @@
                         <input type="search" class="search__input" name="search" placeholder="Search here.." required="">
                         <span><i class="fa-solid fa-magnifying-glass"></i></span>
                     </form>
-                    <div class="theme">
-                        <i class="fa-regular fa-moon"></i>
-                    </div>
-                    <!-- <div class="nav_button">
-                        <button class="btn">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                    </div> -->
+                    <!-- Theme toggle button -->
+                    <div class="theme-toggle-wrapper">
+                        <label class="theme-toggle" for="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <div class="mode-container">
+                                <i class="fa-regular fa-sun"></i>
+                                <i class="fa-regular fa-moon"></i>
+                            </div>
+                        </label>
+                    </div> 
                     <div class="mobile-nav-button text-center">
                         <button id="trigger-overlay" type="button" style="cursor: pointer;"><i class="fa fa-bars" aria-hidden="true"></i></button>
                     </div>
                 </div>
                 <div class="overlay" id="overlay">
                     <button type="button" class="overlay-close" id="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
-
                     <nav>
                       <ul>
                         <li><a href="#" class="active">Home</a></li>
@@ -66,10 +67,7 @@
                       </ul>
                     </nav>
                 </div>
-
-               
-
-                <div class="overlay overlay-scale">
+                <div class="overlay">
                   <button style="cursor:pointer;" type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
         
                   <nav>
@@ -350,6 +348,7 @@
         </div>
     </section>
 
+    <!-- Overlay menu toggle -->
     <script>
         document.getElementById('trigger-overlay').onclick = function () {
             document.getElementById('overlay').style.display='block';
@@ -360,5 +359,34 @@
         }
     </script>
 
+    <!-- Theme toggler -->
+    <script>
+                // Get the checkbox first value
+        const toggle_switch = document.querySelector('.theme-toggle input[type="checkbox"]');
+
+        // Get the stored theme in the local storage and switch the current theme to it
+        const current_theme = localStorage.getItem('theme');
+
+        if (current_theme) {
+            document.documentElement.setAttribute('data-theme', current_theme);
+            if (current_theme === 'dark') {
+                toggle_switch.checked = true;
+            } 
+        }
+
+        // The function that check for the value of the checkbox and switch theme accordingly
+        function switch_theme(i) {
+            if (i.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark'); //Store the current theme into local storage
+            }
+            else {        
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }    
+        }
+        // Add a event listener that runs the function when the user click the checkbox
+        toggle_switch.addEventListener('change', switch_theme);
+    </script>
 </body>
 </html>
