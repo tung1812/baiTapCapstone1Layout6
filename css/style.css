@@ -609,6 +609,9 @@ input:checked+.mode-container i.fa-moon {
     position: relative;
     z-index: 1;
   }
+  .middle h3 {
+    color: #eee;
+  }
   .middle::before {
     content: "";
     background: rgb(16 15 19 / 66%);
@@ -1072,7 +1075,7 @@ input:checked+.mode-container i.fa-moon {
     border: none;
     outline: none;
     cursor: pointer;
-    color: #fff;
+    color: #eee;
     width: 50px;
     height: 50px;
     background: #f60;
@@ -1080,6 +1083,7 @@ input:checked+.mode-container i.fa-moon {
     line-height: 36px;
     border-radius: 35px;
     transition: 0.3s ease-out;
+    font-family: "Quicksand", sans-serif;
   }
   
   @media (min-width: 576px) {
